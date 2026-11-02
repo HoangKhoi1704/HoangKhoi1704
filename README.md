@@ -1,57 +1,37 @@
-# HOANG KHOI NGUYEN
+<div align="center">
 
-> **Software Engineer**  
-> **FPT University**
+# Hoang Khoi Nguyen
 
-[![GitHub](https://img.shields.io/badge/GitHub-HoangKhoi1704-181717?logo=github)](https://github.com/HoangKhoi1704)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nguyen%20Hoang%20Khoi-0A66C2?logo=linkedin)](https://www.linkedin.com/in/nguy%E1%BB%85n-ho%C3%A0ng-kh%C3%B4i-05b227220/)
-[![Email](https://img.shields.io/badge/Email-nguyenhoangkhoi2k6%40gmail.com-ea4335?logo=gmail)](mailto:nguyenhoangkhoi2k6@gmail.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+**Software Engineering Student · Full-stack Developer · AI Researcher**
 
----
+[GitHub](https://github.com/HoangKhoi1704) · [LinkedIn](https://www.linkedin.com/in/nguy%E1%BB%85n-ho%C3%A0ng-kh%C3%B4i-05b227220/) · [Email](mailto:nguyenhoangkhoi2k6@gmail.com)
 
-## About Me
+</div>
 
-Currently a **Software Engineering** student at **FPT University**. I am passionate about programming, eager to learn new technologies, and looking forward to gaining practical experience through real-world projects to develop myself.
+## Videos
 
----
+> Video showcase coming soon.
 
-## Technical Skills
+## Skills
 
-- **Backend:** .NET, Java (JSP)
-- **Frontend:** NodeJS
-- **AI:** LLM, VLM
-- **Data Analyst:** SQL, PowerBI, Python
+<p>
+  <img src="./assets/icons/dotnet.svg" width="48" height="48" alt=".NET">
+  <img src="./assets/icons/java.svg" width="48" height="48" alt="Java">
+  <img src="./assets/icons/nodejs.svg" width="48" height="48" alt="Node.js">
+  <img src="./assets/icons/python.svg" width="48" height="48" alt="Python">
+  <img src="./assets/icons/sql.svg" width="48" height="48" alt="SQL">
+  <img src="./assets/icons/powerbi.svg" width="48" height="48" alt="Power BI">
+</p>
 
----
+## Projects
 
-## Featured Projects & Research
+- [VLM-in-ambiguity-RE](https://github.com/HoangKhoi1704/VLM-in-ambiguity-RE) — AI/NLP research
+- [TEDx Ticketing Platform](https://github.com/ttphats/project-detedxs26) — Full-stack web app
+- [Music Streaming & Playlist Manager](https://github.com/MusicStreamingPlaylistManager/MusicStreamingPlaylistManager) — Java backend
 
-### 1. Multimodal Pretraining Transfer for SRS Ambiguity Detection
-- **Role:** AI & NLP Researcher
-- **Description:** Research on knowledge transfer of VLMs/LLMs for detecting ambiguities in Software Requirements Specification (SRS) documents.
-- **Tech Stack:** `Qwen2.5-VL-3B`, `QLoRA 4-bit`, `PyTorch`, `QuRE Dataset`
-- **Key Metrics:** **Accuracy 87.7%**, **F1-macro 0.847**, **MCC 0.697**, Defect Recall **73.8%**, McNemar's Test ($p = 0.0192$).
-- **Repository:** [HoangKhoi1704/VLM-in-ambiguity-RE](https://github.com/HoangKhoi1704/VLM-in-ambiguity-RE)
+## Contact
 
-### 2. TEDx Ticketing Platform (TEDxFPTUniversityHCMC 2026)
-- **Role:** Full-stack Software Developer
-- **Responsibilities:** Designed and managed business flows and user flows.
-- **Description:** Event ticketing platform for TEDx featuring an interactive seat map and automated ticket delivery.
-- **Tech Stack:** `Next.js 16`, `Prisma ORM`, `MySQL`, `Redis (Upstash)`, `Playwright E2E`, `Resend API`
-- **Repository:** [ttphats/project-detedxs26](https://github.com/ttphats/project-detedxs26)
-
-### 3. Music Streaming & Playlist Manager
-- **Role:** Java Backend & Database Developer
-- **Description:** Online music streaming and playlist management platform integrated with a relational database.
-- **Tech Stack:** `Java`, `Maven`, `SQL`, `Supabase (PostgreSQL)`, `Apache NetBeans`, `Docker`, `Railway Cloud`
-- **Repository:** [MusicStreamingPlaylistManager/MusicStreamingPlaylistManager](https://github.com/MusicStreamingPlaylistManager/MusicStreamingPlaylistManager)
-
----
-
-## Contact Information
-
-- **Location:** Ho Chi Minh City, Vietnam
-- **Email:** [nguyenhoangkhoi2k6@gmail.com](mailto:nguyenhoangkhoi2k6@gmail.com)
-- **LinkedIn:** [linkedin.com/in/nguyen-hoang-khoi](https://www.linkedin.com/in/nguy%E1%BB%85n-ho%C3%A0ng-kh%C3%B4i-05b227220/)
-- **GitHub:** [github.com/HoangKhoi1704](https://github.com/HoangKhoi1704)
+[Email](mailto:nguyenhoangkhoi2k6@gmail.com) ·
+[LinkedIn](https://www.linkedin.com/in/nguy%E1%BB%85n-ho%C3%A0ng-kh%C3%B4i-05b227220/) ·
+[Portfolio](https://hoangkhoi1704.github.io/HoangKhoi1704/) ·
+Ho Chi Minh City, Vietnam
