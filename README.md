@@ -35,4 +35,5 @@
 [Email](mailto:nguyenhoangkhoi2k6@gmail.com) ·
 [LinkedIn](https://www.linkedin.com/in/nguy%E1%BB%85n-ho%C3%A0ng-kh%C3%B4i-05b227220/) ·
 [Portfolio](https://roynguyen.id.vn) ·
+[ORCID](https://orcid.org/0009-0003-2213-558X) ·
 Ho Chi Minh City, Vietnam
