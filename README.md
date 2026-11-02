@@ -21,6 +21,7 @@
   <img src="./assets/icons/python.svg" width="48" height="48" alt="Python">
   <img src="./assets/icons/sql.svg" width="48" height="48" alt="SQL">
   <img src="./assets/icons/powerbi.svg" width="48" height="48" alt="Power BI">
+  <img src="https://cdn.simpleicons.org/github" width="48" height="48" alt="GitHub">
 </p>
 
 ## Projects
