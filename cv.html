@@ -1,644 +1,120 @@
 <!DOCTYPE html>
-<html lang="vi">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae | Hoàng Khôi Nguyễn - Software Developer & AI Researcher</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            /* Palette: Deep Slate & Muted Steel Navy (Eye-friendly, non-glaring) */
-            --primary-color: #1e293b;       /* Dark Slate 800 - soft on eyes */
-            --brand-color: #334e68;         /* Muted Slate Navy (calm, elegant, zero glare) */
-            --accent-color: #486581;        /* Soft Steel Slate */
-            --text-main: #475569;           /* Slate 600 - comfortable reading contrast */
-            --text-dark: #1e293b;           /* Slate 800 */
-            --text-muted: #64748b;          /* Slate 500 */
-            --bg-body: #f4f6f8;             /* Gentle, warm-tinted neutral grey */
-            --bg-card: #ffffff;
-            --border-color: #cbd5e1;        /* Slate 300 */
-            --border-subtle: #e2e8f0;       /* Slate 200 */
-            --badge-bg: #f1f5f9;            /* Minimalist soft slate tag background */
-            --badge-text: #334155;          /* Crisp neutral tag text */
-            --badge-border: #e2e8f0;        /* Subtle border instead of bright blue */
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: var(--text-main);
-            background-color: var(--bg-body);
-            line-height: 1.5;
-            font-size: 9pt;
-            -webkit-print-color-adjust: exact;
-            print-color-adjust: exact;
-        }
-
-        /* TOP NAVIGATION BAR */
-        .top-nav-bar {
-            max-width: 860px;
-            margin: 20px auto 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-btn {
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            padding: 8px 16px;
-            border-radius: 6px;
-            color: var(--text-dark);
-            font-size: 9pt;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.2s ease;
-        }
-
-        .nav-btn:hover {
-            border-color: var(--accent-color);
-            color: var(--primary-color);
-            box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
-        }
-
-        .nav-btn.primary {
-            background: var(--brand-color);
-            color: #ffffff;
-            border-color: var(--brand-color);
-        }
-
-        .nav-btn.primary:hover {
-            background: var(--primary-color);
-            border-color: var(--primary-color);
-            color: #ffffff;
-        }
-
-        /* CV MAIN CONTAINER */
-        .cv-container {
-            max-width: 860px;
-            margin: 16px auto 32px auto;
-            background: var(--bg-card);
-            padding: 36px 40px;
-            border: 1px solid var(--border-subtle);
-            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
-            border-radius: 8px;
-        }
-
-        /* 2-COLUMN LAYOUT */
-        .cv-layout {
-            display: grid;
-            grid-template-columns: 245px 1fr;
-            gap: 28px;
-            align-items: start;
-        }
-
-        /* LEFT COLUMN: PERSONAL INFO & FOUNDATION */
-        .cv-sidebar {
-            border-right: 1.5px solid var(--border-subtle);
-            padding-right: 24px;
-        }
-
-        .sidebar-avatar-wrapper {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .sidebar-avatar {
-            width: 195px;
-            height: 195px;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: center 38%;
-            border: 3px solid var(--border-color);
-            box-shadow: 0 4px 16px rgba(15, 23, 42, 0.09);
-            display: inline-block;
-        }
-
-        .sidebar-block {
-            margin-bottom: 20px;
-        }
-
-        .sidebar-block:last-child {
-            margin-bottom: 0;
-        }
-
-        .sidebar-heading {
-            font-size: 9.5pt;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            letter-spacing: 0.6px;
-            border-bottom: 1.5px solid var(--border-color);
-            padding-bottom: 4px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .sidebar-heading::before {
-            content: "";
-            display: inline-block;
-            width: 3.5px;
-            height: 13px;
-            background-color: var(--brand-color);
-            border-radius: 2px;
-        }
-
-        /* SIDEBAR CONTACT INFO */
-        .sidebar-contact-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .sidebar-contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 9px;
-            font-size: 8.5pt;
-        }
-
-        .contact-icon {
-            width: 14px;
-            height: 14px;
-            flex-shrink: 0;
-            color: var(--brand-color);
-            margin-top: 2px;
-        }
-
-        .contact-value {
-            color: var(--text-dark);
-            word-break: break-word;
-            line-height: 1.35;
-        }
-
-        .contact-value a {
-            color: var(--text-dark);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .contact-value a:hover {
-            color: var(--accent-color);
-            text-decoration: underline;
-        }
-
-        /* SIDEBAR EDUCATION */
-        .sidebar-edu {
-            font-size: 8.5pt;
-        }
-
-        .sidebar-edu-title {
-            font-weight: 700;
-            font-size: 9pt;
-            color: var(--text-dark);
-            line-height: 1.3;
-        }
-
-        .sidebar-edu-meta {
-            font-size: 8pt;
-            color: var(--text-muted);
-            margin-bottom: 3px;
-        }
-
-        .sidebar-edu-degree {
-            font-size: 8.5pt;
-            font-weight: 600;
-            color: var(--brand-color);
-            margin-bottom: 6px;
-            line-height: 1.3;
-        }
-
-        .sidebar-bullet-list {
-            padding-left: 14px;
-            font-size: 8pt;
-            line-height: 1.45;
-            color: var(--text-main);
-        }
-
-        .sidebar-bullet-list li {
-            margin-bottom: 4px;
-        }
-
-        .sidebar-bullet-list li strong {
-            color: var(--text-dark);
-        }
-
-        /* SIDEBAR SKILLS (FLAT LIST STYLE) */
-        .sidebar-skill-list {
-            list-style: none;
-            padding-left: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .sidebar-skill-item {
-            font-size: 8.5pt;
-            font-weight: 500;
-            color: var(--text-dark);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            line-height: 1.4;
-        }
-
-        .sidebar-skill-item::before {
-            content: "";
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background-color: var(--brand-color);
-            flex-shrink: 0;
-        }
-
-        /* RIGHT COLUMN: RECRUITER FOCUS */
-        .cv-main {
-            min-width: 0;
-        }
-
-        .main-header {
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 12px;
-            margin-bottom: 16px;
-        }
-
-        .candidate-name {
-            font-size: 21pt;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            margin-bottom: 3px;
-            line-height: 1.15;
-        }
-
-        .candidate-title {
-            font-size: 10pt;
-            font-weight: 600;
-            color: var(--brand-color);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .main-section {
-            margin-bottom: 18px;
-        }
-
-        .main-section:last-child {
-            margin-bottom: 0;
-        }
-
-        .section-title {
-            font-size: 10.5pt;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            border-bottom: 1.5px solid var(--border-color);
-            padding-bottom: 4px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .section-title::before {
-            content: "";
-            display: inline-block;
-            width: 4px;
-            height: 14px;
-            background-color: var(--brand-color);
-            border-radius: 2px;
-        }
-
-        /* SUMMARY */
-        .summary-text {
-            text-align: justify;
-            color: var(--text-main);
-            font-size: 9pt;
-            line-height: 1.5;
-        }
-
-        .summary-text strong {
-            color: var(--text-dark);
-        }
-
-        /* PROJECT CARDS */
-        .item-card {
-            margin-bottom: 14px;
-        }
-
-        .item-card:last-child {
-            margin-bottom: 0;
-        }
-
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 2px;
-            gap: 8px;
-        }
-
-        .item-title {
-            font-size: 9.5pt;
-            font-weight: 700;
-            color: var(--text-dark);
-            line-height: 1.3;
-        }
-
-        .item-subtitle {
-            font-size: 8.5pt;
-            font-weight: 600;
-            color: var(--brand-color);
-            margin-bottom: 4px;
-        }
-
-        .item-date-location {
-            font-size: 8pt;
-            font-weight: 500;
-            color: var(--text-muted);
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
-
-        /* BULLETS */
-        ul.bullet-list {
-            padding-left: 16px;
-            margin-top: 3px;
-        }
-
-        ul.bullet-list li {
-            margin-bottom: 3px;
-            color: var(--text-main);
-            line-height: 1.45;
-            font-size: 8.5pt;
-        }
-
-        ul.bullet-list li strong {
-            color: var(--text-dark);
-        }
-
-        /* RESPONSIVE & PRINT */
-        @media (max-width: 768px) {
-            .cv-layout {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .cv-sidebar {
-                border-right: none;
-                border-bottom: 1.5px solid var(--border-subtle);
-                padding-right: 0;
-                padding-bottom: 20px;
-            }
-
-            .sidebar-avatar-wrapper {
-                text-align: center;
-            }
-        }
-
-        @media print {
-            body {
-                background: #ffffff;
-                font-size: 9pt;
-            }
-
-            .no-print {
-                display: none !important;
-            }
-
-            .cv-container {
-                max-width: 100%;
-                margin: 0;
-                padding: 0;
-                box-shadow: none;
-                border: none;
-                border-radius: 0;
-            }
-
-            .cv-layout {
-                grid-template-columns: 235px 1fr;
-                gap: 22px;
-            }
-
-            .cv-sidebar {
-                padding-right: 18px;
-            }
-
-            @page {
-                size: A4;
-                margin: 10mm 12mm 10mm 12mm;
-            }
-
-            a {
-                text-decoration: none;
-                color: inherit !important;
-            }
-
-            .section-title {
-                border-bottom-color: var(--primary-color);
-            }
-
-            .sidebar-skill-item {
-                color: #0f172a;
-            }
-
-            .sidebar-skill-item::before {
-                background-color: #334e68;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-        }
-    </style>
+    <meta name="color-scheme" content="light">
+    <meta name="description" content="Hoàng Khôi Nguyễn, Software Engineering student at FPT University seeking a .NET Backend Developer internship.">
+    <title>Hoàng Khôi Nguyễn | .NET Backend Developer Internship</title>
+    <link rel="stylesheet" href="assets/css/cv.css">
 </head>
-
 <body>
-
-    <!-- TOP BAR NAVIGATION (Web view only) -->
-    <div class="top-nav-bar no-print">
+    <nav class="top-nav-bar no-print" aria-label="CV actions">
         <a href="index.html" class="nav-btn">Back to Portfolio</a>
-        <button onclick="window.print()" class="nav-btn primary">Export PDF / Print CV</button>
-    </div>
+        <button type="button" onclick="window.print()" class="nav-btn primary">Export PDF / Print CV</button>
+    </nav>
 
-    <div class="cv-container">
+    <main class="cv-container" aria-labelledby="candidate-name">
+        <header class="cv-header">
+            <h1 id="candidate-name" class="candidate-name" lang="vi">Hoàng Khôi Nguyễn</h1>
+            <p class="candidate-title">Seeking a .NET Backend Developer Internship <span>· Ho Chi Minh City, Vietnam</span></p>
+            <address class="contact-list">
+                <a href="mailto:nguyenhoangkhoi2k6@gmail.com">nguyenhoangkhoi2k6@gmail.com</a>
+                <a href="https://github.com/HoangKhoi1704" target="_blank" rel="noopener noreferrer">github.com/HoangKhoi1704</a>
+                <a href="https://www.linkedin.com/in/nguy%E1%BB%85n-ho%C3%A0ng-kh%C3%B4i-05b227220/" target="_blank" rel="noopener noreferrer">linkedin.com/in/nguyễn-hoàng-khôi-05b227220</a>
+            </address>
+        </header>
 
-        <div class="cv-layout">
+        <section class="cv-section" id="education" aria-labelledby="education-heading">
+            <h2 class="section-title" id="education-heading">Education</h2>
+            <div class="item-row">
+                <h3>FPT University</h3>
+                <span class="item-meta">Ho Chi Minh City, Vietnam</span>
+            </div>
+            <div class="item-row">
+                <p>Bachelor's Degree in Software Engineering</p>
+                <span class="item-meta">2024 - Present</span>
+            </div>
+            <p><strong>GPA:</strong> 8.195/10 <span aria-hidden="true">·</span> <strong>Award:</strong> 100% scholarship.</p>
+        </section>
 
-            <!-- CỘT BÊN TRÁI: THÔNG TIN CÁ NHÂN & NỀN TẢNG -->
-            <aside class="cv-sidebar">
-
-                <!-- AVATAR -->
-                <div class="sidebar-avatar-wrapper">
-                    <img src="./assets/images/avatar.png" alt="Hoàng Khôi Nguyễn Portrait" class="sidebar-avatar">
+        <section class="cv-section" id="projects" aria-labelledby="projects-heading">
+            <h2 class="section-title" id="projects-heading">Projects</h2>
+            <article class="cv-entry">
+                <div class="item-row">
+                    <h3>SportHub - Sports Center Management System</h3>
+                    <a class="item-meta" aria-label="SportHub on GitHub" href="https://github.com/SWP391-SportHub-Group4/sports-center-management-system" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
-
-                <!-- CONTACT INFO -->
-                <div class="sidebar-block">
-                    <h2 class="sidebar-heading">Personal Info</h2>
-                    <div class="sidebar-contact-list">
-                        <div class="sidebar-contact-item">
-                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
-                            <span class="contact-value">TP. Hồ Chí Minh, Việt Nam</span>
-                        </div>
-                        <div class="sidebar-contact-item">
-                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect width="20" height="16" x="2" y="4" rx="2"/>
-                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                            </svg>
-                            <span class="contact-value"><a href="mailto:nguyenhoangkhoi2k6@gmail.com">nguyenhoangkhoi2k6@gmail.com</a></span>
-                        </div>
-                        <div class="sidebar-contact-item">
-                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
-                                <path d="M9 18c-4.51 2-5-2-7-2"/>
-                            </svg>
-                            <span class="contact-value"><a href="https://github.com/HoangKhoi1704" target="_blank">github.com/HoangKhoi1704</a></span>
-                        </div>
-                        <div class="sidebar-contact-item">
-                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                                <rect width="4" height="12" x="2" y="9"/>
-                                <circle cx="4" cy="4" r="2"/>
-                            </svg>
-                            <span class="contact-value"><a href="https://www.linkedin.com/in/nguy%E1%BB%85n-ho%C3%A0ng-kh%C3%B4i-05b227220/" target="_blank">linkedin.com/in/nguyen-hoang-khoi</a></span>
-                        </div>
-                    </div>
+                <div class="item-row">
+                    <p class="item-role">SWP391 Team Project · In Development</p>
+                    <span class="item-meta">2026 - Present</span>
                 </div>
-
-                <!-- EDUCATION -->
-                <div class="sidebar-block">
-                    <h2 class="sidebar-heading">Education</h2>
-                    <div class="sidebar-edu">
-                        <div class="sidebar-edu-title">TRƯỜNG ĐẠI HỌC FPT</div>
-                        <div class="sidebar-edu-meta">2024 – Hiện tại | TP. HCM</div>
-                        <div class="sidebar-edu-degree">Cử nhân Kỹ thuật Phần mềm</div>
-                        <ul class="sidebar-bullet-list">
-                            <li><strong>Học bổng:</strong> Toàn phần 100% (Full Scholarship) ĐH FPT.</li>
-                            <li><strong>Học tập:</strong> GPA 8.0+ / 10 (Xếp loại Giỏi - Academic Distinction).</li>
-                            <li><strong>Chuyên môn:</strong> Backend Developer.</li>
-                        </ul>
-                    </div>
+                <p class="tech-stack"><strong>Project stack:</strong> ASP.NET Core Web API, EF Core, PostgreSQL, JWT authentication, Playwright</p>
+                <ul class="bullet-list">
+                    <li>Updated EF Core and LINQ queries for revenue, points, and refund reports, grouping refunds by recorded payout date. Designed the management dashboard.</li>
+                    <li>Added integration tests and Playwright browser tests for report filters, exports, and dashboard workflows.</li>
+                    <li>Designed member and coach workflows and interfaces, reviewed UI/UX, and proposed improvements.</li>
+                    <li>Deployed the web application and configured VNPay Sandbox to test payment flows.</li>
+                </ul>
+            </article>
+            <article class="cv-entry">
+                <div class="item-row">
+                    <h3>TEDx Ticketing Platform</h3>
+                    <a class="item-meta" aria-label="TEDx Ticketing Platform on GitHub" href="https://github.com/ttphats/project-detedxs26" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
-
-                <!-- TECHNICAL SKILLS -->
-                <div class="sidebar-block">
-                    <h2 class="sidebar-heading">Technical Skills</h2>
-                    <ul class="sidebar-skill-list">
-                        <li class="sidebar-skill-item">Java (JSP)</li>
-                        <li class="sidebar-skill-item">.NET</li>
-                        <li class="sidebar-skill-item">Python</li>
-                        <li class="sidebar-skill-item">SQL & MySQL</li>
-                        <li class="sidebar-skill-item">HTML / CSS</li>
-                    </ul>
+                <div class="item-row">
+                    <p class="item-role">Web Development and Ticketing Operations · TEDx FPTUniversity</p>
+                    <span class="item-meta">2026</span>
                 </div>
+                <p class="tech-stack"><strong>Project stack:</strong> Next.js, TypeScript, Prisma, MySQL, Redis, Resend, Playwright</p>
+                <ul class="bullet-list">
+                    <li>Designed the homepage and ticket flow. Added promotions and speaker registration to the MVP.</li>
+                    <li>Integrated Telegram order notifications so the sales team could track new purchases.</li>
+                    <li>Helped test, debug, and operate the platform during live ticket sales for the TEDx event.</li>
+                </ul>
+            </article>
+        </section>
 
-                <!-- SOFT SKILLS -->
-                <div class="sidebar-block">
-                    <h2 class="sidebar-heading">Soft Skills</h2>
-                    <ul class="sidebar-skill-list">
-                        <li class="sidebar-skill-item">Teamwork & Collaboration</li>
-                        <li class="sidebar-skill-item">Problem Solving</li>
-                        <li class="sidebar-skill-item">Critical Thinking</li>
-                        <li class="sidebar-skill-item">Technical Communication</li>
-                        <li class="sidebar-skill-item">Time Management</li>
-                        <li class="sidebar-skill-item">Continuous Learning & Adaptability</li>
-                    </ul>
+        <section class="cv-section" id="research" aria-labelledby="research-heading">
+            <h2 class="section-title" id="research-heading">Research</h2>
+            <article class="cv-entry">
+                <div class="item-row">
+                    <h3>Multimodal Pretraining Transfer for Text-Only Ambiguity Detection in Software Requirements</h3>
+                    <a class="item-meta" aria-label="Research code and experiments on GitHub" href="https://github.com/HoangKhoi1704/VLM-in-ambiguity-RE" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
+                <div class="item-row">
+                    <p class="item-role">First Author · Research Team Lead</p>
+                    <span class="item-meta">2026</span>
+                </div>
+                <p>Accepted at FISAT 2026, with a conference presentation planned.</p>
+                <ul class="bullet-list">
+                    <li>Led an NLP study on software requirements ambiguity, comparing Qwen2.5 and Qwen2.5-VL using zero-shot evaluation and 4-bit QLoRA fine-tuning on 2,109 deduplicated QuRE requirements.</li>
+                    <li>The fine-tuned VLM averaged 86.3% accuracy and 0.836 macro F1 across 3 seeds. Its difference from the fine-tuned LLM was not statistically significant (p = 0.505).</li>
+                </ul>
+            </article>
+        </section>
 
-            </aside>
+        <section class="cv-section" id="activities" aria-labelledby="activities-heading">
+            <h2 class="section-title" id="activities-heading">Leadership &amp; Activities</h2>
+            <div class="item-row">
+                <h3>TEDx FPTUniversity</h3>
+                <span class="item-meta">May - Sep 2026</span>
+            </div>
+            <p class="item-role">Head of Customer Service Department</p>
+            <ul class="bullet-list">
+                <li>Led a 3-person development and support team. Helped plan ticket benefits, pricing, and promotion.</li>
+                <li>Handled customer support requests and urgent issues during ticket sales.</li>
+            </ul>
+            <p class="additional-activities"><strong>Selected activities:</strong> TEDx FPTUniversity (Jun - Aug 2025), FPT Global Hackathon 2026, RMIT GenAI Hackathon 2026, and the Mầm volunteer project.</p>
+        </section>
 
-            <!-- CỘT BÊN PHẢI: THÔNG TIN NHÀ TUYỂN DỤNG TẬP TRUNG -->
-            <main class="cv-main">
-
-                <!-- MAIN HEADER: NAME & PROFESSIONAL TITLE -->
-                <header class="main-header">
-                    <h1 class="candidate-name">HOÀNG KHÔI NGUYỄN</h1>
-                    <div class="candidate-title">Software Developer | AI & NLP Research</div>
-                </header>
-
-                <!-- PROFESSIONAL SUMMARY -->
-                <section class="main-section">
-                    <h2 class="section-title">Professional Summary</h2>
-                    <p class="summary-text">
-                        Sinh viên ngành <strong>Kỹ thuật Phần mềm (Software Engineering)</strong> có nền tảng vững chắc về <strong>Cấu trúc Dữ liệu & Giải thuật (Data Structures & Algorithms)</strong>, <strong>Lập trình Hướng đối tượng (OOP)</strong> và phát triển ứng dụng Web (React, Next.js, HTML5, CSS3, JavaScript). Định hướng nghiên cứu ứng dụng <strong>Generative AI & LLM/VLM</strong> trong Kỹ thuật Phần mềm. Sở hữu kinh nghiệm thực nghiệm <strong>Zero-Shot & Fine-Tuning</strong> mô hình AI, tư duy phân tích hệ thống logic và kỹ năng viết báo cáo kỹ thuật chuẩn Academic. Đang tìm kiếm cơ hội <strong>Software Engineer Intern / AI Research Intern</strong> để đóng góp vào các dự án phần mềm thực tế.
-                    </p>
-                </section>
-
-                <!-- PROJECTS & RESEARCH EXPERIENCE -->
-                <section class="main-section">
-                    <h2 class="section-title">Projects & Research Experience</h2>
-
-                    <!-- Project 1: RESEARCH PAPER ON GITHUB -->
-                    <div class="item-card">
-                        <div class="item-header">
-                            <span class="item-title">Multimodal Pretraining Transfer for SRS Ambiguity Detection</span>
-                            <span class="item-date-location">2026 | <a href="https://github.com/HoangKhoi1704/VLM-in-ambiguity-RE" target="_blank" style="color: var(--brand-color); text-decoration: underline;">GitHub Repository</a></span>
-                        </div>
-                        <div class="item-subtitle">AI & NLP Researcher (Dự án Nghiên cứu nhóm / Group Research Project)</div>
-                        <ul class="bullet-list">
-                            <li><strong>Bài toán & Đóng góp:</strong> Nghiên cứu khả năng chuyển giao tri thức từ tiền huấn luyện đa phương thức (Multimodal Pretraining Transfer) cho bài toán phát hiện lỗi mơ hồ (Ambiguity Detection) trong tài liệu Yêu cầu Phần mềm (SRS).</li>
-                            <li><strong>Phương pháp & Mô hình:</strong> Thiết kế ma trận thực nghiệm 2x2 so sánh 4 điều kiện: <strong>VLM Trained (Qwen2.5-VL-3B)</strong>, <strong>VLM Zero-Shot</strong>, <strong>LLM Trained (Qwen2.5-3B)</strong> và <strong>LLM Zero-Shot</strong>. Triển khai tinh chỉnh mô hình bằng kỹ thuật <strong>QLoRA (4-bit NF4 quantization, fp16)</strong> trên tập dữ liệu <strong>QuRE Dataset</strong> (2,187 mẫu).</li>
-                            <li><strong>Kết quả & Metrics ấn tượng:</strong> Mô hình <strong>VLM Trained</strong> đạt hiệu năng vượt trội với <strong>Accuracy 87.7%</strong>, <strong>F1-macro 0.847</strong>, <strong>MCC 0.697</strong> và nâng <strong>Defect-class Recall lên 73.8%</strong> (giảm số ca bỏ sót lỗi mơ hồ từ 23 xuống 17 ca so với LLM Trained).</li>
-                            <li><strong>Kiểm định Thống kê:</strong> Xác minh tính có ý nghĩa thống kê của sự cải thiện hiệu năng bằng kiểm định <strong>McNemar’s Test (p = 0.0192)</strong>.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Project 2: REAL REPO METADATA (Java / Maven / SQL / Docker) -->
-                    <div class="item-card">
-                        <div class="item-header">
-                            <span class="item-title">Music Streaming & Playlist Manager</span>
-                            <span class="item-date-location">2024 | <a href="https://github.com/MusicStreamingPlaylistManager/MusicStreamingPlaylistManager" target="_blank" style="color: var(--brand-color); text-decoration: underline;">GitHub Repository</a></span>
-                        </div>
-                        <div class="item-subtitle">Java Backend & Database Developer (Dự án nhóm / Group Project)</div>
-                        <ul class="bullet-list">
-                            <li><strong>Tổng quan:</strong> Nền tảng quản lý danh sách phát và phát nhạc trực tuyến tích hợp cơ sở dữ liệu quan hệ, đã được triển khai trực tiếp trên đám mây (Railway Cloud).</li>
-                            <li><strong>Kiến trúc & Backend:</strong> Hiện thực mô hình ứng dụng và xử lý logic nghiệp vụ hệ thống bằng <strong>Java & Maven (`pom.xml`)</strong> trên môi trường <strong>Apache NetBeans</strong>.</li>
-                            <li><strong>Cơ sở dữ liệu:</strong> Thiết kế sơ đồ quan hệ, truy vấn dữ liệu và tối ưu hóa script khởi tạo cơ sở dữ liệu <strong>SQL (`init.sql`)</strong> tích hợp <strong>Supabase (PostgreSQL Cloud)</strong>.</li>
-                            <li><strong>DevOps & Deployment:</strong> Đóng gói môi trường thực thi bằng <strong>Dockerfile & Nixpacks</strong>, quản lý phân chia nhánh mã nguồn (Git Flow) hiệu quả trên <strong>GitHub</strong>.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Project 3: TEDx TICKETING PLATFORM -->
-                    <div class="item-card">
-                        <div class="item-header">
-                            <span class="item-title">TEDx Ticketing Platform (TEDxFPTUniversityHCMC 2026)</span>
-                            <span class="item-date-location">2026 | <a href="https://github.com/ttphats/project-detedxs26" target="_blank" style="color: var(--brand-color); text-decoration: underline;">GitHub Repository</a></span>
-                        </div>
-                        <div class="item-subtitle">Full-stack Software Developer (Dự án nhóm / Group Project)</div>
-                        <ul class="bullet-list">
-                            <li><strong>Tổng quan:</strong> Hệ thống đặt vé và quản lý chỗ ngồi trực tuyến cho sự kiện <strong>TEDxFPTUniversityHCMC 2026</strong> (Theme: "Finding Flow"), tích hợp sơ đồ ghế tương tác và gửi vé tự động.</li>
-                            <li><strong>Xử lý Đồng thời & Chống trùng vé:</strong> Triển khai cơ chế <strong>Redis Atomic Seat Locking</strong> khóa ghế trong 10 phút, ngăn chặn tuyệt đối tình trạng đặt trùng ghế (Zero Overselling) khi hàng trăm người dùng đặt vé cùng lúc.</li>
-                            <li><strong>Kiến trúc & Công nghệ:</strong> Xây dựng hệ thống web trên nền <strong>Next.js, Prisma ORM & MySQL</strong>, tích hợp <strong>Resend API</strong> để tự động tạo mã QR và gửi vé PDF qua email cho khách hàng.</li>
-                            <li><strong>Testing & Deployment:</strong> Xây dựng bộ kiểm thử tự động <strong>42 E2E Test Cases với Playwright</strong> và triển khai tự động CI/CD trên nền tảng <strong>Vercel Cloud</strong>.</li>
-                        </ul>
-                    </div>
-                </section>
-
-            </main>
-
-        </div>
-
-    </div>
-
+        <section class="cv-section" id="skills" aria-labelledby="skills-heading">
+            <h2 class="section-title" id="skills-heading">Technical Skills</h2>
+            <p><strong>Backend:</strong> C#, .NET, ASP.NET Core Web API, Entity Framework Core (EF Core), LINQ.</p>
+            <p><strong>Relational Databases:</strong> SQL, PostgreSQL, MySQL.</p>
+            <p><strong>Testing &amp; Tools:</strong> Integration testing, end-to-end (E2E) testing, Playwright, Git, GitHub.</p>
+            <p><strong>Additional:</strong> Java, JSP, Python, HTML, CSS.</p>
+        </section>
+    </main>
 </body>
-
 </html>
